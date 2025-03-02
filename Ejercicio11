@@ -1,0 +1,8 @@
+def evaluar_polinomio_coeficientes_pares(coeficientes, x):
+    return sum(coef * (x ** i) for i, coef in enumerate(reversed(coeficientes)) if coef % 2 == 0)
+matricula = "240813"
+coeficientes = [int(digit) for digit in matricula]  # Lista de coeficientes
+cedula = "40213282813"
+x = sum(int(digit) for digit in cedula)
+resultado = evaluar_polinomio_coeficientes_pares(coeficientes, x)
+print(f"El valor del polinomio con coeficientes pares cuando x = {x} es: {resultado}")
